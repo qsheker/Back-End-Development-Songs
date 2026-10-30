@@ -23,3 +23,9 @@ Run `flask --app app run --port 5002`. For containers use the supplied Dockerfil
 - `DELETE /song/<id>`: 204, or 404 when missing.
 
 Invalid requests return 400/415; database failures return 503 without exposing credentials. This public educational API contains synthetic course data only and has no production authentication layer.
+
+## Setup verification
+
+This repository was created from the [official course template](https://github.com/ibm-developer-skills-network/hvlga-Back-End-Development-Songs). On 2026-10-30, `bash bin/setup.sh` completed successfully (exit status 0) with Python 3.12, installed all requirements, and produced the activation instructions for `.venv`.
+
+The original course lab refers to Python 3.9 and a named virtual environment. This implementation uses Python 3.10+ and the repository-local `.venv` to support its current Flask dependencies; the deployed container uses Python 3.11.
